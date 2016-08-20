@@ -1,0 +1,21 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+
+using namespace std;
+void main()
+{ float a,b,c, promedio;
+cout<<"ingrese sus tres valores"<<endl;
+  
+  cout<<"ingrese primer numero"<<endl;
+  cin>>a;
+  cout<<"ingrese segundo numero"<<endl;
+  cin>>b;
+  cout<<"ingrese tercer numero"<<endl;
+  cin>>c;
+  promedio= (a+b+c)/3.0; //tip: se debe colocar 3.0 por que es real
+	  cout<<"su promedio es :"<<promedio;
+
+	  getch();
+}
