@@ -1,0 +1,61 @@
+// ejercicio.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+using namespace std;
+
+void cargar(double V[], int n);
+void mostrar(double V[], int n);
+void odenarasc(double V[], int n);
+
+void main()
+{int n;
+ double V[MAX];
+ do{
+ cout<<"ingrese su tamaño que no sea mayor a 100"<<endl;
+ cin>>n;
+ }while(0>=n||n>MAX);
+ cargar( V,  n);
+ mostrar( V, n);
+ odenarasc(V,  n);
+ 
+	getch();
+}
+void cargar(double V[], int n)
+{ int i;
+  cout<<"ingrese numeros a su vector"<<endl;
+  for(i=0;i<n;i++)
+     {
+      cin>>V[i];
+     }
+}
+void mostrar(double V[], int n)
+{  int i;
+  cout<<"elementos del vector"<<endl;
+  for(i=0;i<n;i++)
+     {
+      cout<<V[i]<<" ";
+     }
+}
+
+void odenarasc(double V[], int n)
+{ int i,j,aux;
+  for(i=0;i<n;i++)
+    {
+	   for(j=i;j<n;j++)
+	   { if(V[i]>V[j])
+	    {aux=V[j];
+		V[j]=V[i];
+		V[i]=aux;
+	    }
+	   }
+     }
+  for(i=0;i<n;i++)
+  cout<<V[i]<<" ";
+
+}
+  
+  
